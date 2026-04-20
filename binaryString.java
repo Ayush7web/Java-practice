@@ -9,8 +9,7 @@ if(n == 0){
   return;
 }
 
-    //kaam
-
+// kaam
     if(lastPlace == 0){
 
       //sit 0 on chair n;
