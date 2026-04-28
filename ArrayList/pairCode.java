@@ -37,7 +37,7 @@ public class pairCode {
         rp = (n + rp - 1) % n;
       }
     }
-    return false ;
+    return false;
   }
 
   public static void main(String[] args) {
