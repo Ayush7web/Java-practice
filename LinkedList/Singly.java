@@ -17,5 +17,7 @@ public class Singly {
     Singly  sl   =   new  Singly();
     sl.head = new Node(1);
     sl.head.next  =  new Node(2);
-    }
+  System.out.println(sl);  
+  }
+    
 }
