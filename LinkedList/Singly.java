@@ -9,6 +9,12 @@ public class Singly {
       this.data = data;
       this.next = null;
     }
+    public Node1(int data ){
+      this.data = data;
+      this.next = null;
+      return;
+    }
+    
   }
 
   public static Node head;
