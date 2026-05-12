@@ -12,7 +12,7 @@ public class MajorityElement {
   public static int MooresAlgo(int nums[]){
     // int halfNum = nums/2;
     int counter = 0;
-    int n = nums.length;
+    int n = nums.length / 2;
     for(int i = 0; i <= n; i++){
       if(nums[i] == nums[i+1]){
         counter++;
