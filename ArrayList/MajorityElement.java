@@ -7,17 +7,15 @@ import java.util.*;
 public class MajorityElement {
 
   // base case
-  // if(){
-  //   Math.random();
-  // }
+ 
   
 
   public static int MooresAlgo(int nums[]){
     // int halfNum = nums/2;
     int counter = 0;
-    int n = nums.length / 2;
-    for(int i = 0; i < n; i++){
-      if(nums[i] == nums[i+1]){
+    int n = nums.length ;
+    for(int i = 0; i < n /2 ; i++){
+      if(nums[i] != nums[i+1]){
         counter++;
       }else{
         
