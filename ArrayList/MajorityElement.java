@@ -2,28 +2,37 @@
 
 //As we have already discussed above, the majority element is the element that appears more than [n / 2] times. If no such element exists, then return -1.
 
-import java.util.*;
-
 public class MajorityElement {
 
-  // base case
-  public static int MooresAlgo(int nums[]){
-    // int halfNum = nums/2;
+  // Returns the majority element if it exists (> n/2 occurrences), else -1.
+  public static int MooresAlgo(int[] nums) {
+    int candidate = 0;
+    int count = 0;
 
-    int counter = 1;
-    int n = nums.length-1 ;
-    for(int i = 0; i < n ; i++){
-      if(nums[i] == nums[i+1]){
-        counter++;
-      }else{
-        
+    // 1) Find a candidate using Moore's Voting Algorithm
+    for (int num : nums) {
+      if (count == 0) {
+        candidate = num;
+        count = 1;
+      } else if (num == candidate) {
+        count++;
+      } else {
+        count--;
       }
-    }  
-    return -1;
+    }
+
+    // 2) Verify the candidate
+    int freq = 0;
+    for (int num : nums) {
+      if (num == candidate)
+        freq++;
+    }
+
+    return (freq > nums.length / 2) ? candidate : -1;
   }
 
   public static void main(String[] args) {
-    int nums [] = {2,2,1,1,1,2,2};
+    int nums[] = { 2, 2, 1, 1, 1, 2, 2 };
     System.out.println(MooresAlgo(nums));
   }
 }
