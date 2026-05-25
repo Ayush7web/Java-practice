@@ -44,6 +44,6 @@ public class Intersection {
     num2.next = new Node(5);
     num2.next.next = new Node(9);
     num2.next.next.next = new Node(3);
-
+meetPoint(num1, num2);
   }
 }
