@@ -1,7 +1,7 @@
-
 import java.util.*;
 
 public class Intersection {
+
   static class Node {
     int data;
     Node next;
@@ -14,36 +14,50 @@ public class Intersection {
   public static void meetPoint(Node num1, Node num2) {
 
     if (num1 == null || num2 == null) {
+      System.out.println(-1);
       return;
     }
 
-    Node p1 = num1, p2 = num2;
+    Node p1 = num1;
+    Node p2 = num2;
 
-    while (num1 != num2) {
-      if (num1 == null) {
-        num1 = p2;
-      } else if (num2 == null) {
-        num2 = p1;
+    while (p1 != p2) {
+
+      if (p1 == null) {
+        p1 = num2;
       } else {
-        num1 = num1.next;
-        num2 = num2.next;
+        p1 = p1.next;
+      }
+
+      if (p2 == null) {
+        p2 = num1;
+      } else {
+        p2 = p2.next;
       }
     }
-    System.out.println(num1.data);
+
+    if (p1 == null) {
+      System.out.println(-1);
+    } else {
+      System.out.println(p1.data);
+    }
   }
 
   public static void main(String[] args) {
-    Node newNode = new Node(1);
+
+    // common node
+    Node common = new Node(3);
 
     Node num1 = new Node(1);
     num1.next = new Node(4);
     num1.next.next = new Node(7);
-    num1.next.next.next = new Node(3);
+    num1.next.next.next = common;
 
     Node num2 = new Node(2);
     num2.next = new Node(5);
     num2.next.next = new Node(9);
-    num2.next.next.next = new Node(3);
-meetPoint(num1, num2);
+    num2.next.next.next = common;
+
+    meetPoint(num1, num2);
   }
 }
