@@ -46,10 +46,10 @@ public class Intersection {
   public static void main(String[] args) {
 
     // common node
-    Node common = new Node(3);
+    Node common = new Node(87);
 
     Node num1 = new Node(1);
-    num1.next = new Node(4);
+    num1.next = new Node(2);
     num1.next.next = new Node(7);
     num1.next.next.next = common;
 
@@ -60,4 +60,4 @@ public class Intersection {
 
     meetPoint(num1, num2);
   }
-}
+} 
