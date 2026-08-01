@@ -9,7 +9,7 @@ class GCD {
     for (int i = 0; i < sumOdd.length; i++) {
       sumOne = sumOdd[i];
     }
-    System.out.println(sumOne);
+    // System.out.println(sumOne);
     return 0;
   }
 
