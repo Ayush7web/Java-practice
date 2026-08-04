@@ -87,10 +87,11 @@ public class MergeSort {
     MergeSort list = new MergeSort();
     Node head = null;
     head = list.addFirst(head, 1);
-    head = list.addFirst(head, 2);
-    head = list.addFirst(head, 3);
+
     head = list.addFirst(head, 4);
     head = list.addFirst(head, 5);
+    head = list.addFirst(head, 7);
+    head = list.addFirst(head, 8);
 
     list.printList(head);
 
