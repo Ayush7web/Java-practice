@@ -92,6 +92,8 @@ public class MergeSort {
     head = list.addFirst(head, 5);
     head = list.addFirst(head, 7);
     head = list.addFirst(head, 8);
+     head = list.addFirst(head, 32);
+    head = list.addFirst(head, 54);
 
     list.printList(head);
 
