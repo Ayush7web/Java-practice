@@ -21,7 +21,7 @@ class Student {
   Student(Student s1){
     this.name = s1.name;
     this.roll = s1.roll;
-
+System.out.println("print kar " + name);
   }
   Student(){
     System.out.println("the contructor called");
