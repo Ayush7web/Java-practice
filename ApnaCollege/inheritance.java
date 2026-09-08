@@ -36,7 +36,6 @@ package ApnaCollege;
 //   String schoolName;
 // }
 
-
 // Important points
 // private and protected identifier are not allowed in front of class. samjhe mere bache.
 // Nested class, Constructor, methods and field are are allowed access in private and protected.
@@ -45,3 +44,25 @@ package ApnaCollege;
 
 // Vehicle v = new car();
 //  // reference point    //object creation
+
+public class inheritance {
+  public static void main(String[] args) {
+    Vehicle obj1 = new Car();
+    obj1.print();
+
+    Vehicle obj2 = new Vehicle();
+    obj2.print();
+  }
+}
+
+class Vehicle {
+  void print() {
+    System.out.println("Base class Vehicle");
+  }
+}
+
+class Car extends Vehicle {
+  void print() {
+    System.out.println("Derive class Car");
+  }
+}
