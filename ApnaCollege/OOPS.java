@@ -67,24 +67,55 @@ package ApnaCollege;
 //   }
 // }
 
+// class Book{
+//   int price;
+//   static int count;
 
-class Book{
-  int price;
-  static int count;
+//   public Book(int price){
+//     this.price = price;
+//     count++;
+//   }
+// }
 
-  public Book(int price){
-    this.price = price;
-    count++;
+// public class OOPS{
+//   public static void main(String[] args) {
+//     System.out.println(Book.count);
+//     Book b1 = new Book(150);
+//     Book b2 = new Book(250);
+//     Book b3 = new Book(250);
+//     System.out.println(Book.count);
+//   }
+// }
+
+// class Test {
+//   static int marks;
+
+//   void set_marks(int marks) {
+//     this.marks = marks;
+//   }
+// }
+
+// class OOPS {
+//   public static void main(String[] args) {
+//     Test t = new Test();
+//     t.set_marks(98);
+//     System.out.println(Test.marks);
+//   }
+// }
+
+
+class Test{
+  static int a = 10;
+  static int b;
+  static void changeB(){
+    b = a * 3;
   }
 }
 
-
-public class OOPS{
+class OOPS{
   public static void main(String[] args) {
-    System.out.println(Book.count);
-    Book b1 = new Book(150);
-    Book b2 = new Book(250);
-    Book b3 = new Book(250);
-    System.out.println(Book.count);
+    Test t = new Test();
+    t.changeB();
+    System.out.println(Test.a + Test.b);
   }
 }
