@@ -45,24 +45,46 @@ package ApnaCollege;
 // Vehicle v = new car();
 //  // reference point    //object creation
 
-public class inheritance {
+// public class inheritance {
+//   public static void main(String[] args) {
+//     Vehicle obj1 = new Car();
+//     obj1.print();
+
+//     Vehicle obj2 = new Vehicle();
+//     obj2.print();
+//   }
+// }
+
+// class Vehicle {
+//   void print() {
+//     System.out.println("Base class Vehicle");
+//   }
+// }
+
+// class Car extends Vehicle {
+//   void print() {
+//     System.out.println("Derive class Car");
+//   }
+// }
+
+
+class Book{
+  int price;
+  static int count;
+
+  public Book(int price){
+    this.price = price;
+    count++;
+  }
+}
+
+
+public class OOPS{
   public static void main(String[] args) {
-    Vehicle obj1 = new Car();
-    obj1.print();
-
-    Vehicle obj2 = new Vehicle();
-    obj2.print();
-  }
-}
-
-class Vehicle {
-  void print() {
-    System.out.println("Base class Vehicle");
-  }
-}
-
-class Car extends Vehicle {
-  void print() {
-    System.out.println("Derive class Car");
+    System.out.println(Book.count);
+    Book b1 = new Book(150);
+    Book b2 = new Book(250);
+    Book b3 = new Book(250);
+    System.out.println(Book.count);
   }
 }
