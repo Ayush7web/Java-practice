@@ -104,18 +104,20 @@ package ApnaCollege;
 // }
 
 
-class Test{
-  static int a = 10;
-  static int b;
-  static void changeB(){
-    b = a * 3;
-  }
-}
+// class Test{
+//   static int a = 10;
+//   static int b;
+//   static void changeB(){
+//     b = a * 3;
+//   }
+// }
 
-class OOPS{
-  public static void main(String[] args) {
-    Test t = new Test();
-    t.changeB();
-    System.out.println(Test.a + Test.b);
-  }
-}
+// class OOPS{
+//   public static void main(String[] args) {
+//     Test t = new Test();
+//     t.changeB();
+//     System.out.println(Test.a + Test.b);
+//   }
+// }
+
+
