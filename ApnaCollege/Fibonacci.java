@@ -22,8 +22,8 @@ public class Fibonacci {
       return true;
     }
 
-    if (arr[i] > arr[i + 1]) {
-      return false;
+    if (arr[i] > arr[i + 1]) { // value ki baat ho rahi hai
+      return false; 
     }
 
     return isSorted(arr, i + 1);
