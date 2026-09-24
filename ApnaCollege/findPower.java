@@ -31,17 +31,53 @@ package ApnaCollege;
 //   }
 // }
 
-public class findPower{
-  public static  int powerFunc(int x, int n){
-    if(n == 0){
-      return 1;
+// public class findPower{
+//   public static  int powerFunc(int x, int n){
+//     if(n == 0){
+//       return 1;
+//     }
+//     return x * powerFunc(x , n -1 );
+//   }
+
+
+
+//   public static void main(String[] args) {
+//     System.out.println(powerFunc(32, 5));
+//   }
+// }
+
+
+class Solution {
+  public int smallestIndex(int[] nums) {
+    for (int i = 0; i < nums.length; i++) {
+      if (sumOfDigits(nums[i]) == i) {
+        return i; // Kyunki hum 0 se iterate kar rahe hain, sabse pehla match hi smallest index
+                  // hoga
+      }
     }
-    return x * powerFunc(x , n -1 );
+    return -1; // Agar koi index match na kare
   }
 
-
-
-  public static void main(String[] args) {
-    System.out.println(powerFunc(32, 5));
+  private int sumOfDigits(int n) {
+    int sum = 0;
+    n = Math.abs(n); // Negative numbers handle karne ke liye (agar input me ho)
+    while (n > 0) {
+      sum += n % 10;
+      n /= 10;
+    }
+    return sum;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
