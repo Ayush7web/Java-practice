@@ -6,7 +6,7 @@ import java.util.*;
 public class hashmap {
 
   static class HashMap<K, V> { // K for key and V for value is generic if type not fixed , then you create a
-                               // generic value , which is going on.
+   // generic value , which is going on.
     private class Node {
       K key;
       V value;
@@ -38,7 +38,15 @@ public class hashmap {
 
     public void put(K key, V value) {
       int bi = hashFunction(key);
-      int di = SearchInLL(key); /// valid -1
+      int di = SearchInLL(key, bi); /// valid -1
+      if(di != -1){
+        Node node = buckets[bi].get(di);
+        node.value = value;
+      }else{
+        buckets[bi].add(new Node(key, value));
+        size++;
+      }
+      int lambda = @;
     }
 
     public boolean containsKey(K key) {
